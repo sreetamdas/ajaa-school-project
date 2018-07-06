@@ -1,11 +1,19 @@
 @import "~bulma/sass/utilities/initial-variables"
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,400|Josefin+Slab:100,600")
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,400")
+
+
+@font-face
+  font-family: "Circular"
+  src: url("./CircularStd-Bold.ttf")
+
 // Config vars
 $kaldi-red: #000
 $kaldi-red-invert: #fff
 
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
+.Circular
+  font-family: "Circular"
 .Roboto
   font-family: "Roboto"
   font-weight: 400
@@ -14,13 +22,13 @@ $primary-invert: $kaldi-red-invert
   font-family: "Roboto"
   font-weight: 100
 
-.JosefinSlab
-  font-family: "Josefin Slab"
-  font-weight: 600
+// .JosefinSlab
+//   font-family: "Josefin Slab"
+//   font-weight: 600
 
-.JosefinSlabThin
-  font-family: "Josefin Slab"
-  font-weight: 100
+// .JosefinSlabThin
+//   font-family: "Josefin Slab"
+//   font-weight: 100
 
 .content .taglist
   list-style: none

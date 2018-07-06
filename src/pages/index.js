@@ -8,50 +8,62 @@ export default class IndexPage extends React.Component {
 		const { edges: posts } = data.allMarkdownRemark;
 
 		return (
-			<section className="section">
-				<div className="container is-widescreen">
-					<div className="content">
-						<h1 className="has-text-weight-bold is-size-2">
-							Latest Posts
-						</h1>
-					</div>
-					<div className="container-cssgrid">
-						{posts.map(({ node: post }) => (
-							<div
-								// className="content"
-								className="item"
-								style={{
-									// border: "1px solid lightblue",
-									
-								}}
-								key={post.id}
-							>
-								<p className="title is-size-4">
-									<Link
-										className="has-text-primary"
-										to={post.fields.slug}
-									>
-										{post.frontmatter.title}
-									</Link>
-									<span> &bull; </span>
-									<small>{post.frontmatter.date}</small>
-								</p>
-								<p>
-									{post.excerpt}
-									<br />
-									<br />
-									<Link
-										className="button is-info is-rounded"
-										to={post.fields.slug}
-									>
-										Keep Reading →
-									</Link>
-								</p>
+			<React.Fragment>
+				<section className="hero is-medium">
+					<div className="hero-body">
+						<div className="container has-text-centered">
+							<div className="is-size-2 title Circular" >
+								Welcome to Dadhi Machha Gadiya Nodal High School Forum!
 							</div>
-						))}
+						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+				<section className="section">
+					<div className="container is-widescreen">
+						<div className="content">
+							<h1 className="has-text-weight-bold is-size-2">
+								Latest Posts
+							</h1>
+						</div>
+						<div className="container-cssgrid">
+							{posts.map(({ node: post }) => (
+								<div
+									// className="content"
+									className="item"
+									style={
+										{
+											// border: "1px solid lightblue",
+										}
+									}
+									key={post.id}
+								>
+									<p className="title is-size-4">
+										<Link
+											className="has-text-primary"
+											to={post.fields.slug}
+										>
+											{post.frontmatter.title}
+										</Link>
+										<span> &bull; </span>
+										<small className="has-text-info">{post.frontmatter.date}</small>
+									</p>
+									<p>
+										{post.excerpt}
+										<br />
+										<br />
+										<Link
+											className="button is-info is-rounded"
+											to={post.fields.slug}
+										>
+											Keep Reading →
+										</Link>
+									</p>
+								</div>
+							))}
+						</div>
+					</div>
+				</section>
+			</React.Fragment>
 		);
 	}
 }
