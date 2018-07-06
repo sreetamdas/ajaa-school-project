@@ -1,11 +1,26 @@
 @import "~bulma/sass/utilities/initial-variables"
-
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,400|Josefin+Slab:100,600")
 // Config vars
-$kaldi-red: #FD461E
+$kaldi-red: #000
 $kaldi-red-invert: #fff
 
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
+.Roboto
+  font-family: "Roboto"
+  font-weight: 400
+
+.RobotoThin
+  font-family: "Roboto"
+  font-weight: 100
+
+.JosefinSlab
+  font-family: "Josefin Slab"
+  font-weight: 600
+
+.JosefinSlabThin
+  font-family: "Josefin Slab"
+  font-weight: 100
 
 .content .taglist
   list-style: none
@@ -38,5 +53,31 @@ $primary-invert: $kaldi-red-invert
 
 .margin-top-0
   margin-top: 0 !important
+
+.container-cssgrid
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  // grid-template-rows: aut
+  grid-gap: 10px
+
+@media (max-width: 1100px)
+  .container-cssgrid
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 10px
+@media (max-width: 800px)
+  .container-cssgrid
+    display: grid
+    grid-template-columns: 1fr
+    grid-gap: 10px
+.item
+  border-radius: 25px
+  padding: 2em
+  margin: 10px
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2)
+  transition: 0.2s
+
+.item:hover
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
 
 @import "~bulma"
