@@ -13,7 +13,7 @@ export default class IndexPage extends React.Component {
 					<div className="hero-body">
 						<div className="container has-text-centered">
 							<div className="is-size-2 has-text-black Circular">
-								Welcome to Dadhi Machha Gadiya Nodal High School
+								Welcome to Dadhi Machha Gadia Nodal High School
 								Forum!
 							</div>
 						</div>
