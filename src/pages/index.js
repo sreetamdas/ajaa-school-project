@@ -12,8 +12,9 @@ export default class IndexPage extends React.Component {
 				<section className="hero is-medium">
 					<div className="hero-body">
 						<div className="container has-text-centered">
-							<div className="is-size-2 title Circular" >
-								Welcome to Dadhi Machha Gadiya Nodal High School Forum!
+							<div className="is-size-2 has-text-black Circular">
+								Welcome to Dadhi Machha Gadiya Nodal High School
+								Forum!
 							</div>
 						</div>
 					</div>
@@ -30,11 +31,6 @@ export default class IndexPage extends React.Component {
 								<div
 									// className="content"
 									className="item"
-									style={
-										{
-											// border: "1px solid lightblue",
-										}
-									}
 									key={post.id}
 								>
 									<p className="title is-size-4">
@@ -45,7 +41,9 @@ export default class IndexPage extends React.Component {
 											{post.frontmatter.title}
 										</Link>
 										<span> &bull; </span>
-										<small className="has-text-info">{post.frontmatter.date}</small>
+										<small className="has-text-info">
+											{post.frontmatter.date}
+										</small>
 									</p>
 									<p>
 										{post.excerpt}
