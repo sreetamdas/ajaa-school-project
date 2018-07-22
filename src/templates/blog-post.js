@@ -23,17 +23,19 @@ export const BlogPostTemplate = ({
 			<div className="container content">
 				<div className="columns is-multiline is-centered">
 					<div className="column is-8">
-						<h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+						<h1 className="title is-size-2 has-text-weight-bold is-bold-light Circular">
 							{title}
 						</h1>
-						<p>{description}</p>
+						<p className="has-text-grey">{description}</p>
 						<PostContent
 							content={content}
 							className="has-text-black"
 						/>
 						{tags && tags.length ? (
 							<div style={{ marginTop: `4rem` }}>
-								<h4 className="has-text-black">Tags</h4>
+								<h4 className="has-text-black Circular">
+									Tags
+								</h4>
 								<ul className="taglist">
 									{tags.map(tag => (
 										<li key={tag + `tag`}>
@@ -47,7 +49,7 @@ export const BlogPostTemplate = ({
 								</ul>
 							</div>
 						) : null}
-						<h4 className="has-text-black">Comments</h4>
+						<h4 className="has-text-black Circular">Comments</h4>
 					</div>
 					<div className="column is-7">
 						<Comments slug={slug} />

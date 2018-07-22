@@ -22,7 +22,7 @@ export default class IndexPage extends React.Component {
 				<section className="section">
 					<div className="container is-widescreen">
 						<div className="content">
-							<h1 className="has-text-weight-bold is-size-2">
+							<h1 className="has-text-weight-bold is-size-2 has-text-black Circular">
 								Latest Posts
 							</h1>
 						</div>
@@ -33,7 +33,7 @@ export default class IndexPage extends React.Component {
 									className="item"
 									key={post.id}
 								>
-									<p className="title is-size-4">
+									<p className="title is-size-4 Circular">
 										<Link
 											className="has-text-primary"
 											to={post.fields.slug}
@@ -50,7 +50,7 @@ export default class IndexPage extends React.Component {
 										<br />
 										<br />
 										<Link
-											className="button is-info is-rounded"
+											className="button is-info is-rounded Circular"
 											to={post.fields.slug}
 										>
 											Keep Reading →
